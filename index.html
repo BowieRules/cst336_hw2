@@ -6,18 +6,21 @@
     <title> Team Generator </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="css/style.css">
     <script src="js/app.js"></script>
 </head>
 <body>
 
+<h1 class="h1 display-2 text-light"> Team Generator </h1>
+<br><br>
+<hr>
+
 <div class="mega-header"></div>
-
-<h1 class="megatron text-light"> Team Generator </h1>
-
+<br><br>
 <div class="container">
-    <div class="row">
-      <div class="col-md bg-success"><label for="genderRadios">Teams Gender:</label>
+    <div class="row space-buffer">
+      <div class="col-md bg-success space-buffer"><label for="genderRadios">Teams Gender:</label>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="genderRadios" id="genderOption1" value="option1">
         <label class="form-check-label" for="genderOption1">
@@ -37,27 +40,38 @@
         </label>
       </div>
     </div>
-    <div class="col-md bg-warning">
+    <div class="col-md bg-warning space-buffer">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
        <label for="numTeams">Number of Teams:</label>
        <input type="number" class="form-control bfh-number" id="numTeams" value="3" min="1" max="10">
+     </div>
+   </div>
     </div>
-    <div class="col-md bg-info">
+    <div class="col-md bg-info space-buffer">
+     <div class="row justify-content-md-center">
+      <div class="col-md-8">
         <label for="sizeTeams">Size of Teams:</label>
         <input type="number" class="form-control bfh-number" id="sizeTeams" value="5" min="1" max="10">
+      </div>
+     </div>
     </div>
   </div>
-  <br>
-  <div class="row">
-  <button type="button" id="btnGenerate" class="btn btn-primary btn-block">Generate Teams<span id="showoption" class="thumbnail" style="width:50px;height:50px"><img src='img/unisex-icon-white.png' alt='unisex'></div></button>
+  <div class="row space-buffer">
+  <button type="button" id="btnGenerate" class="btn btn-primary btn-block">Generate Teams<span id="showoption" class="thumbnail" style="width:50px;height:50px"><img src='img/unisex-icon-white.png' alt='unisex'></span></button>
   </div>
-  <br>
-  <p id="validation"></p>
-  <br><br>
 </div>
+<p id="validation"></p>
 
+<br><br>
+<hr>
 
 <div class="results"></div>
-
+<br><br>
+<hr>
+<br><br>
+<hr>
+<br><br>
 <footer class="bg-dark">
       <div><img src="img/CSUMBLogo.png" alt="CSUMB Logo" style="width: 20%"></div>
       <small class="text-muted">CST336 Internet Programming. 2020 &copy; Petrovich <br />
