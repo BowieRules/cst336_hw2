@@ -23,7 +23,7 @@ function shuffle(genderOpt, array){
     }
 
     // reshuffled array
-    newArray = filteredList.slice(0);
+    let newArray = filteredList.slice(0);
     // initializes m as our array iterator, t as a temporary storage for the 'card' we are taking out of the 'deck', i will be a random index where we will place our 'card'.
     var m = newArray.length, t, i;
 

@@ -21,6 +21,15 @@ body {
     position: relative;
 }
 
+.inventory {
+    display: none;
+    margin: 5px auto;
+    font-size: 8px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
 .mega-header {
   position: absolute;
   top: 0;
