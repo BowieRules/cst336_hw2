@@ -24,10 +24,15 @@ body {
 .inventory {
     display: none;
     margin: 5px auto;
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
     padding: 10px;
-    position: relative;
+    -webkit-columns: 4 150px;
+    -moz-columns: 4 150px;
+    columns: 4 150px;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
 }
 
 .mega-header {
@@ -63,4 +68,8 @@ h1 {
 margin-top:20px;
 margin-bottom:20px;
 position: relative;
+}
+
+.thisTeam {
+  background-color: lightgray;
 }

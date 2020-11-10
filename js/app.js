@@ -1,4 +1,6 @@
-var i = 0, shuffledArray, groupArray, string, displayCounter = 0, delay = 0, size = 0, number = 0;
+/* global $ */
+var i=0, j=0, outString, groupArray, shuffledArray, displayCounter = 0, delay = 0, size = 0, number = 0;
+
 var peopleArray = [["Erik Hill", "M"], ["Alicia Harding", "F"], ["Brian Thompson","M"], ["Casie Wallace", "F"],
  ["Chelsea Manning","F"], ["Clare Levy","F"],["Cody Baker", "M"], ["Jeanne West", "F"], ["Kaitlin Thompson","F"],
  ["Kelly Mills","F"], ["Michael Moore", "M"], ["Luke Walker", "M"], ["Mary Karr", "F"], ["Aaron Watson", "M"],
@@ -81,12 +83,12 @@ function display(arr){
         $('.results').empty();
         // Write Group Columns
         for (i = 0; i < arr.length; i++) {
-            string = "<div class = 'groupColumn'><strong>Team " + (i + 1) + ":</strong><br>";
+            outString = "<div class = 'groupColumn'><strong>Team " + (i + 1) + ":</strong><br><div class='thisTeam'>";
             for (j = 0; j < arr[i].length; j++) {
-                string += arr[i][j][0] +  " [" + arr[i][j][1] + "]<br>";
+                outString += arr[i][j][0] +  " [" + arr[i][j][1] + "]<br>";
             }
-            string += "</div>";
-            $('.results').append(string);
+            outString += "</div></div>";
+            $('.results').append(outString);
         }
         $('.results').fadeIn(2000).css('display', 'inline-block');
     }, delay);
@@ -111,6 +113,21 @@ $(document).ready(function(){
           $('#showoption').html("<img src='img/female-icon-white.png' alt='female'>");
         }
     });
+    
+    displayInventory();
+
+    function displayInventory() {
+        
+        $('.inventory').empty();
+        // Write out inventory
+        outString = "<strong>Currently in our Cohort:</strong><br>";
+        for (i = 0; i < peopleArray.length; i++) {
+            outString += peopleArray[i][0] +  " [" + peopleArray[i][1] + "]<br>";
+        }
+        $('.inventory').append(outString);
+        $('.inventory').css('display', 'inline-block');
+    }
+                
 
     function processRequest(){
         // Set number of teams variable
@@ -118,7 +135,7 @@ $(document).ready(function(){
         // Set size variable
         size = $("#sizeTeams").val();
         // Set gender selection
-        genderOption = $("input[name='genderRadios']:checked").val();
+        let genderOption = $("input[name='genderRadios']:checked").val();
 
         if(!validateInput(number, size, genderOption)){
             document.getElementById("validation").innerHTML = "Please pick valid number of teams or the size of teams";
