@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+.groupColumn {
+    margin: 25px;
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.results {
+    display: none;
+    margin: 5px auto;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+.mega-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 90%;
+  background-image:
+        radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17),
+        url(../img/random-number-slots.png);
+  background-repeat: no-repeat;
+  opacity: 0.35;
+}
+
+.thumbnail img{
+  width:30px;
+  height:30px;
+}
+
+#validation {
+	background: #FFC199; /*Change background color*/
+	border-left: 9px solid #FF6600; /*Change left border color*/
+	color: #2c3e50; /*Change text color*/
+}
